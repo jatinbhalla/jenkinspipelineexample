@@ -13,14 +13,22 @@ pipeline {
                 echo "M2_HOME = /opt/maven"
             }
         }
-        stage('Build') {
+        stage('Build1') {
             steps {
                 dir("/var/lib/jenkins/workspace/new") {
                 sh 'mvn -B -DskipTests clean package'
                 }
             
             }
+        stage('Build2') {
+            steps {
+                echo "hello world"
+                }
+            
+            }
+            
         }
+        
      }
     post {
        always {
