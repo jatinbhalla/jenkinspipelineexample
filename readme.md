@@ -1,2 +1,3 @@
 trigger demo
 hello
+hi
